@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text Sizes -->
+    <dimen name="text_size_xs">10sp</dimen>
+    <dimen name="text_size_sm">12sp</dimen>
+    <dimen name="text_size_base">14sp</dimen>
+    <dimen name="text_size_lg">16sp</dimen>
+    <dimen name="text_size_xl">18sp</dimen>
+    <dimen name="text_size_2xl">20sp</dimen>
+    <dimen name="text_size_3xl">24sp</dimen>
+    <dimen name="text_size_4xl">28sp</dimen>
+
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">20dp</dimen>
+    <dimen name="spacing_2xl">24dp</dimen>
+    <dimen name="spacing_3xl">32dp</dimen>
+
+    <!-- Padding & Margin -->
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+
+    <!-- Border Radius -->
+    <dimen name="border_radius_sm">4dp</dimen>
+    <dimen name="border_radius_md">8dp</dimen>
+    <dimen name="border_radius_lg">12dp</dimen>
+    <dimen name="border_radius_xl">16dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_xs">16dp</dimen>
+    <dimen name="icon_size_sm">20dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">32dp</dimen>
+    <dimen name="icon_size_xl">48dp</dimen>
+
+    <!-- Button Sizes -->
+    <dimen name="button_height_sm">36dp</dimen>
+    <dimen name="button_height_md">44dp</dimen>
+    <dimen name="button_height_lg">52dp</dimen>
+    <dimen name="button_height_xl">56dp</dimen>
+
+    <!-- Card Sizes -->
+    <dimen name="card_height_sm">80dp</dimen>
+    <dimen name="card_height_md">120dp</dimen>
+    <dimen name="card_height_lg">160dp</dimen>
+
+    <!-- NFC Scanner Visualization -->
+    <dimen name="nfc_scanner_size">200dp</dimen>
+    <dimen name="nfc_scanner_border_width">2dp</dimen>
+
+    <!-- Avatar Sizes -->
+    <dimen name="avatar_size_sm">40dp</dimen>
+    <dimen name="avatar_size_md">56dp</dimen>
+    <dimen name="avatar_size_lg">80dp</dimen>
+
+    <!-- View Heights -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="bottom_nav_height">56dp</dimen>
+
+    <!-- Sheet Heights -->
+    <dimen name="bottom_sheet_peek_height">56dp</dimen>
+
+    <!-- Animation Timings (not dimen but using resource type) -->
+    <integer name="animation_duration_short">200</integer>
+    <integer name="animation_duration_normal">300</integer>
+    <integer name="animation_duration_long">500</integer>
+
+    <!-- Dialog/Popup -->
+    <dimen name="dialog_corner_radius">12dp</dimen>
+    <dimen name="dialog_min_width">280dp</dimen>
+
+    <!-- Screen Margins -->
+    <dimen name="screen_margin_horizontal">16dp</dimen>
+    <dimen name="screen_margin_vertical">16dp</dimen>
+</resources>

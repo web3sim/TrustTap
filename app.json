@@ -1,0 +1,7 @@
+{
+  "name": "HumanPassportMobile",
+  "displayName": "Human Passport",
+  "version": "1.0.0",
+  "description": "Portable Hardware-Backed Identity with Keycard",
+  "platforms": ["ios", "android"]
+}

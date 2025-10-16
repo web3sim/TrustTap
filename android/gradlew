@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /opt/homebrew/opt/gradle@7/bin/gradle "$@"

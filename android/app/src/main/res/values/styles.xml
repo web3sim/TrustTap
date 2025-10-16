@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base App Theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/secondary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <!-- NoActionBar Theme for React Native -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/primary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="CardStyle">
+        <item name="android:background">@color/white</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="PrimaryButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundColor">@color/primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_lg</item>
+        <item name="android:paddingTop">@dimen/spacing_md</item>
+        <item name="android:paddingBottom">@dimen/spacing_md</item>
+        <item name="android:paddingLeft">@dimen/spacing_lg</item>
+        <item name="android:paddingRight">@dimen/spacing_lg</item>
+        <item name="android:minHeight">@dimen/button_height_md</item>
+    </style>
+
+    <style name="SecondaryButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundColor">@color/secondary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_lg</item>
+        <item name="android:paddingTop">@dimen/spacing_md</item>
+        <item name="android:paddingBottom">@dimen/spacing_md</item>
+        <item name="android:minHeight">@dimen/button_height_md</item>
+    </style>
+
+    <style name="SuccessButton">
+        <item name="android:backgroundColor">@color/success</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_lg</item>
+        <item name="android:paddingTop">@dimen/spacing_md</item>
+        <item name="android:paddingBottom">@dimen/spacing_md</item>
+        <item name="android:minHeight">@dimen/button_height_md</item>
+    </style>
+
+    <style name="ErrorButton">
+        <item name="android:backgroundColor">@color/error</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_lg</item>
+        <item name="android:paddingTop">@dimen/spacing_md</item>
+        <item name="android:paddingBottom">@dimen/spacing_md</item>
+        <item name="android:minHeight">@dimen/button_height_md</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TextH1">
+        <item name="android:textSize">@dimen/text_size_4xl</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextH2">
+        <item name="android:textSize">@dimen/text_size_3xl</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextH3">
+        <item name="android:textSize">@dimen/text_size_2xl</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextBody1">
+        <item name="android:textSize">@dimen/text_size_lg</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <style name="TextBody2">
+        <item name="android:textSize">@dimen/text_size_base</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+    </style>
+
+    <style name="TextCaption">
+        <item name="android:textSize">@dimen/text_size_sm</item>
+        <item name="android:textColor">@color/text_tertiary</item>
+    </style>
+
+    <!-- Input Styles -->
+    <style name="EditTextStyle">
+        <item name="android:textSize">@dimen/text_size_lg</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:padding">@dimen/spacing_md</item>
+        <item name="android:background">@color/surface</item>
+    </style>
+
+    <!-- Toolbar Style -->
+    <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/primary</item>
+        <item name="android:elevation">2dp</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <!-- Dialog Styles -->
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/secondary</item>
+    </style>
+
+    <!-- Progress Bar Styles -->
+    <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressBackgroundTint">@color/gray_200</item>
+        <item name="android:progressTint">@color/primary</item>
+    </style>
+
+    <!-- Divider Styles -->
+    <style name="DividerStyle">
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <!-- Badge Styles -->
+    <style name="BadgeStyle">
+        <item name="android:backgroundColor">@color/secondary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_xs</item>
+        <item name="android:padding">@dimen/spacing_xs</item>
+    </style>
+
+    <!-- Chip Styles -->
+    <style name="ChipStyle">
+        <item name="android:background">@color/primary_light</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:padding">@dimen/spacing_sm</item>
+        <item name="android:textSize">@dimen/text_size_sm</item>
+    </style>
+
+    <!-- NFC Scanner Overlay -->
+    <style name="NFCScannerOverlay">
+        <item name="android:background">#CC000000</item>
+    </style>
+
+    <!-- Status Colors -->
+    <style name="StatusSuccess">
+        <item name="android:textColor">@color/success</item>
+        <item name="android:background">@color/success_light</item>
+    </style>
+
+    <style name="StatusError">
+        <item name="android:textColor">@color/error</item>
+        <item name="android:background">@color/error_light</item>
+    </style>
+
+    <style name="StatusWarning">
+        <item name="android:textColor">@color/warning</item>
+        <item name="android:background">@color/warning_light</item>
+    </style>
+
+    <style name="StatusInfo">
+        <item name="android:textColor">@color/info</item>
+        <item name="android:background">@color/info_light</item>
+    </style>
+</resources>

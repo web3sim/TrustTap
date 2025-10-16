@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Human Passport</string>
+    <string name="app_description">Portable Hardware-Backed Identity with Keycard</string>
+
+    <!-- Navigation -->
+    <string name="login">Login</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="logout">Logout</string>
+    <string name="sign_transaction">Sign Transaction</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- NFC Strings -->
+    <string name="nfc_required">NFC is required to use Human Passport</string>
+    <string name="nfc_disabled">NFC is disabled. Please enable it in Settings</string>
+    <string name="nfc_not_available">NFC is not available on this device</string>
+    <string name="nfc_scanning">Scanning for Keycard...</string>
+    <string name="nfc_detected">Keycard detected</string>
+    <string name="nfc_tap_keycard">Tap your Keycard to continue</string>
+
+    <!-- PIN Strings -->
+    <string name="enter_pin">Enter PIN</string>
+    <string name="verify_pin">Verify PIN</string>
+    <string name="pin_invalid">Invalid PIN</string>
+    <string name="pin_attempts_left">Attempts left: %1$d</string>
+    <string name="pin_blocked">PIN attempts exceeded. Please try again later</string>
+
+    <!-- Transaction Strings -->
+    <string name="from_address">From Address</string>
+    <string name="to_address">To Address</string>
+    <string name="amount">Amount (ETH)</string>
+    <string name="gas_price">Gas Price (Gwei)</string>
+    <string name="estimated_total">Estimated Total Cost</string>
+    <string name="review_transaction">Review Transaction</string>
+    <string name="confirm_transaction">Confirm Transaction</string>
+    <string name="sign_with_keycard">Sign with Keycard</string>
+    <string name="transaction_signed">Transaction signed successfully</string>
+
+    <!-- Passport Strings -->
+    <string name="humanity_score">Humanity Score</string>
+    <string name="verified_human">Verified Human</string>
+    <string name="verified_credentials">Verified Credentials</string>
+    <string name="add_credentials">Add More Credentials</string>
+    <string name="passport_verification">Passport Verification</string>
+
+    <!-- Error Messages -->
+    <string name="error_invalid_address">Invalid Ethereum address format</string>
+    <string name="error_keycard_not_connected">Keycard not connected</string>
+    <string name="error_nfc_error">NFC error occurred</string>
+    <string name="error_api_error">API request failed</string>
+    <string name="error_network_error">Network connection error</string>
+
+    <!-- Success Messages -->
+    <string name="success_login">Login successful</string>
+    <string name="success_transaction">Transaction signed successfully</string>
+    <string name="success_verified">Verification successful</string>
+
+    <!-- Security Messages -->
+    <string name="security_info">Security Information</string>
+    <string name="security_pin_verified_hardware">• PIN verified on Keycard hardware</string>
+    <string name="security_keys_never_exported">• Private keys never leave device</string>
+    <string name="security_encrypted_nfc">• Encrypted NFC communication</string>
+
+    <!-- Permissions -->
+    <string name="permission_nfc">NFC Permission</string>
+    <string name="permission_nfc_description">Human Passport needs access to NFC to communicate with your Keycard</string>
+
+    <!-- Status -->
+    <string name="loading">Loading...</string>
+    <string name="processing">Processing...</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="warning">Warning</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+</resources>

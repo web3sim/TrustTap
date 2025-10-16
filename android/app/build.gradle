@@ -1,0 +1,163 @@
+apply plugin: "com.android.application"
+
+try {
+    apply plugin: "com.facebook.react"
+} catch (Exception e) {
+    println "React plugin not found, continuing with basic config"
+}
+
+/**
+ * This is the configuration block to customize your React Native Android app.
+ * By default, the signs of following properties are determined by the NDEBUG and HERMES_ENGINE_DIALECT environment variables.
+ * The signs of following properties are determined by the NDEBUG and HERMES_ENGINE_DIALECT environment variables.
+ * You can also override the FLIPPER_VERSION property from the command line.
+ *
+ * NONDEBUG=true ./gradlew clean build -DversionCode=1 -DversionName="1.0"
+ */
+
+try {
+    react {
+        entryFile = file(["node", "--print", "require.resolve('@react-native/js-engine-hermes-compact')"].execute(text: true, workingDir: rootDir).text.trim())
+        codegenDir = file("${buildDir}/generated/source/codegen")
+        /* Changes made to JavaScript files during the build `install` step are kept after the build completes.
+         * By default, changes to JavaScript files are not persisted.
+         */
+        extraPackagerArgs = []
+    }
+} catch (Exception e) {
+    println "React configuration not available, skipping"
+}
+
+/**
+ * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
+ */
+def enableProguardInReleaseBuilds = true
+
+/**
+ * The preferred build flavor of JavaScriptCore.
+ *
+ * For example, to use the international variant, you can use:
+ * `def jscFlavor = 'org.webkit:android-jsc-intl:+'`
+ *
+ * The international variant includes ICU i18n APIs and other
+ * internationalized modules on top of the base JavaScriptCore.  If this option
+ * is not used, the default "-vanilla" JavaScriptCore will be used within each
+ * architecture separately.
+ */
+def jscFlavor = 'org.webkit:android-jsc:+'
+
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
+
+    namespace "com.humanpassport"
+    defaultConfig {
+        applicationId "com.humanpassport"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+
+        // NFC Support
+        useLibrary 'android.nfc'
+
+        buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", "false"
+        buildConfigField "String",  "REACT_APP_DEBUG", '"true"'
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDirs += 'src/main/java'
+            }
+            res {
+                srcDirs += 'src/main/res'
+            }
+        }
+    }
+
+    packagingOptions {
+        pickFirst '**/armeabi-v7a/libc++_shared.so'
+        pickFirst '**/x86/libc++_shared.so'
+        pickFirst '**/arm64-v8a/libc++_shared.so'
+        pickFirst '**/x86_64/libc++_shared.so'
+        pickFirst '**/x86/libjsc.so'
+        pickFirst '**/armeabi-v7a/libjsc.so'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    // React Native
+    implementation 'com.facebook.react:react-android:0.74.1'
+
+    // JavaScript Runtime
+    if (hermes_engine_src_dir == null) {
+        implementation("com.facebook.react:hermes-android:0.74.1")
+    } else {
+        implementation files(hermes_engine_src_dir)
+    }
+
+    if (jscFlavor != null) {
+        implementation jscFlavor
+    }
+
+    // NFC Support
+    implementation 'androidx.nfc:nfc:1.1.0'
+
+    // Networking
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+
+    // Security
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+
+    // Keychain
+    implementation 'com.google.android.gms:play-services-base:18.3.0'
+
+    // Utils
+    implementation 'commons-codec:commons-codec:1.16.0'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+// Load react native config
+project.ext.react = [
+    entryFile   : "index.js",
+    enableHermes: true,
+]
+
+// Apply react native gradle (if available)
+if (file("../../node_modules/react-native/react.gradle").exists()) {
+    apply from: "../../node_modules/react-native/react.gradle"
+}

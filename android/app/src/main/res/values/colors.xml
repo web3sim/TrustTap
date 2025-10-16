@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#0066CC</color>
+    <color name="primary_dark">#0052A3</color>
+    <color name="primary_light">#E8F0FF</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary">#FF9800</color>
+    <color name="secondary_dark">#F57C00</color>
+    <color name="secondary_light">#FFE8D0</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="success_light">#E8F5E9</color>
+    <color name="error">#CC0000</color>
+    <color name="error_light">#FFEBEE</color>
+    <color name="warning">#FFA500</color>
+    <color name="warning_light">#FFF8E1</color>
+    <color name="info">#0066CC</color>
+    <color name="info_light">#E3F2FD</color>
+
+    <!-- Grayscale -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#E8E8E8</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#CCCCCC</color>
+    <color name="gray_500">#999999</color>
+    <color name="gray_600">#666666</color>
+    <color name="gray_700">#333333</color>
+    <color name="gray_800">#111111</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_tertiary">#999999</color>
+    <color name="text_hint">#CCCCCC</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F5F5F5</color>
+    <color name="surface_variant">#EFEFEF</color>
+
+    <!-- Border Colors -->
+    <color name="border">#E0E0E0</color>
+    <color name="divider">#E8E8E8</color>
+
+    <!-- Specialized Colors -->
+    <color name="nfc_active">#D0E8FF</color>
+    <color name="nfc_border">#0066CC</color>
+    <color name="keycard_verified">#4CAF50</color>
+    <color name="keycard_locked">#CC0000</color>
+
+    <!-- Ethereum/Blockchain -->
+    <color name="ethereum">#627EEA</color>
+    <color name="ethereum_light">#E8ECFF</color>
+
+    <!-- Navigation -->
+    <string name="tab_color_primary">@color/primary</string>
+</resources>
